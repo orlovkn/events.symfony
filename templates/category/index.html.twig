@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block body %}
+    <section class="scene">
+        <div class="grid grid--sidar">
+            <div class="grid__item">
+                <div class="wysiwyg"><h3>{{ title }}</h3></div>
+            </div>
+            <div class="grid__item">
+                <div class="table" >
+                    <div class="table__content">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th scope="col">Название</th>{#
+                                <th scope="col">ред</th>
+                                <th scope="col">удл</th>#}
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for item in list %}
+                            <tr>
+                                <td scope="row"><a href="{{ path('category_detail', {'id': item.id}) }}">{{ item.name }}</a><br><span class="common-base-color-hint">{{ item.note }}</span></td>
+                                {#<td><a href="#!">ред</a></td>
+                                <td><a href="#!">удл</a></td>#}
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

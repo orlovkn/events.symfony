@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Event: {{ event.name }}{% endblock %}
+
+{% block body %}
+    <section class="scene">
+        <div class="grid grid--sidar">
+            <div class="grid__item">
+                <div class="wysiwyg"><h3>Event: {{ event.name }}</h3></div>
+            </div>
+            <div class="grid__item">
+                <p><b>date</b>: {{ event.date|date('F j, Y, g:i a') }}
+                {{ event.text | raw }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

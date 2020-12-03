@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ru">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,shrink-to-fit=no,viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <link href="/assets/app.css" rel="stylesheet">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div class="page">
+    {% include 'parts/header.html.twig' %}
+    {% block body %}{% endblock %}
+    <script src="/assets/app.js"></script>
+    {% block javascripts %}{% endblock %}
+</div>
+</body>
+</html>
