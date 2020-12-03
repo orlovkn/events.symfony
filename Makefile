@@ -1,3 +1,3 @@
 tests:
-	bin/phpunit
+    bin/phpunit
 .PHONY: tests
